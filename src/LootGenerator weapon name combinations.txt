@@ -1,0 +1,96 @@
+LootGenerator weapon name combinations
+     Setup 1 (adj, adj, noun)
+          1)
+              
+          2)
+               Heavy
+               Hardened
+               Spinning
+               Rapid               
+               Two-Pronged
+               Fanged
+               Precise
+               Deadly
+               Scoped
+               FMJ
+               Iron
+               Concealed
+               Shooty
+               Hidden
+               Repeating
+               Piercing
+               Steadfast
+               Helpful
+               Crippling
+               Macabre
+               Morbid
+               Intimidating
+               Powerful
+               Abusive
+               Estranged
+               Mysterious
+               Ghostly
+               
+           3)
+               Phantom
+               Menace
+               Addiction
+               Ash
+               Cadaver
+               Anxiety
+               Ghost
+               Viper
+               Scorpion
+               Turmoil
+               Anguish
+               Resentment
+               Strife
+               Liberator
+               Hound
+               Hyena
+               Lion
+               Fear
+               Bangstick
+               Blaster
+               Piercer
+               Panther
+               Centurion
+               Phalanx
+               Cannon-Fodder
+               Vindicator               
+               Juggernaut
+               Tracker
+               Avenger
+               Sniper
+               Assassin
+               Stalker
+               Hunter
+               Predator               
+               
+      Setup 2
+           1) *Same as Setup 2's second adj*
+           2)
+               
+           3)  
+                 
+      Setup 3 (adj, noun, noun)
+          1)
+          2)
+          3)               
+               Lobber
+               Sharpshooter
+               Gun
+               Rifle
+               Repeater
+               Revolver
+               SMG
+               LMG
+               
+               
+      Setup 4 (adj, noun, verb)
+          1)
+          2)
+          3)
+          
+      Description
+          "A powerful/fast/precise/deadly [type of weapon]. Deals [status_effect] damage. Effective against [strength], but weak against [weakness]."
