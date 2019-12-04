@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class MasterEX {
     static Player player = new Player();
+
     public static Player getPlayer(){
         return player;
     }
-
     public static void generalCommand(){
         Scanner scan = new Scanner(System.in);
         String next = scan.next(); String input = next;
@@ -26,13 +26,12 @@ public class MasterEX {
         if(command=="" || target==""){
             System.out.println("Execution failed. Syntax Error.");
         }
-        if(command.toLowerCase().equals("equip")){
+        if(command.toUpperCase().equals("EQUIP")){
 
         }
-        if(command.toLowerCase().equals("sneak")){
+        if(command.toUpperCase().equals("SNEAK")){
 
         }
-
 
     }
     public static void battleCommand(){
@@ -74,7 +73,8 @@ public class MasterEX {
                 selected = player.getInventory()[i];
             }
         }
-
+        Enemy targetEnemy;
+        //TODO - build a system that checks for enemies in the battle
 
         if(command.toUpperCase().equals("USE")){
             if(selected instanceof Item){
@@ -92,8 +92,8 @@ public class MasterEX {
             }
         }
         if(command.toUpperCase().equals("BLITZ")){
-            if(selected instanceof Weapon){
-                ((Weapon) selected).BLITZ(target);
+            if(selected instanceof Weapon){//THIS SHOULD NOT REQUIRE NEW ENEMIES, SHOULD BE FED THE ENEMY VARIABLES FROM THE BATTLE
+                ((Weapon) selected).BLITZ(new Enemy(target, "k", 4, 4, 4, 4, 4, 4, 4));//TODO - FIX
             }
         }
         if(command.toUpperCase().equals("SHOOT")){
