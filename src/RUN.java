@@ -9,7 +9,6 @@ public class RUN {
         System.out.println(gun.getName());
         System.out.println(gun.getDescription());
         Battle.BattleRoutine(true, "Ooh", 6, MasterEX.e1, MasterEX.e2, MasterEX.e3, MasterEX.e4, 4);
-
     }
 
 }

@@ -379,7 +379,7 @@ public class Master {
      * Creates/spawns symbols according to type-------------------------------------------------------------------------
      */
     public static String GenerateSymbol(String symbol) {
-        if (symbol == "Flame") {
+        if (symbol == "Heat") {
             return "🔥";     //△
         } else if (symbol == "Cold") {
             return "❄";
@@ -405,6 +405,8 @@ public class Master {
             return "⍉";
         }else if (symbol == "Dead") {
             return "☠";
+        }else if (symbol == "Bleeding") {
+            return "🔪";//should be updated if slash makes it in as an element
         }
         //else if (symbol == "Blind") {
         //    return ‍"👁";   //apparently an "illegal" symbol

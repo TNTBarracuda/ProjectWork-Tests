@@ -65,11 +65,10 @@ public class MasterEX {
             String weapon = "";
             String command = "";
             String target = "";
-            //for(int i=0; i<next.length(); i++){
             String[] divide = input.trim().split("\\s");//TODO... WHAT THE FUCK IS HAPPENING?!?
-            for(int i=0; i<divide.length; i++){
-                System.out.println(divide[i]);
-            }
+//            for(int i=0; i<divide.length; i++){
+//                System.out.println(divide[i]);
+//            }
             System.out.println(divide.length);
             if (divide.length == 3) {
                 weapon = divide[0];
@@ -78,7 +77,7 @@ public class MasterEX {
                 availableOptions = false;
             } else {
                 //System.out.println(Master.Red("Execution failed. Syntax Error.", 'b'));
-                continue;
+                break;
             }
             System.out.println(weapon);
             System.out.println(command);
