@@ -25,7 +25,25 @@ public class Enemy extends Being {
             else if(Rand >20){}
             else /**Rand <20)*/{}
         }
+        if(1==1){
+            name = "Name";
+            description = "Description";
+            level = 1;
+            maxHealth = (int)Master.getLEVEL_SCALING(100, level);
+            size = 100;
+            agility = 100;
+            aggressionThreshold = 100;
+            awareness = 100;
+        }//JUST ALLOTS STATS, SINCE NO ENEMIES ARE FINALIZED YET //TODO - create all enemy info for generation
+    }
+    public void Rampage(){
+        maxHealth*=1.5;
+        setHealth((int)(getHealth()*1.5));
+        agility *= ((Math.random()/2)+1);
+        setArmor(getArmor()/2);
+        if(aggression>=aggressionThreshold){
 
+        }
     }
     public void OptionPhase(){
 

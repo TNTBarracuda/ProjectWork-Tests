@@ -1,6 +1,6 @@
 public class Maul extends Melee {
     public Maul(String name, String description, int level){
-        super(name, description, level);
+        super(level);
     }
     public void SMASH(){
 

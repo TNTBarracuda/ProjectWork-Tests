@@ -21,8 +21,14 @@ public abstract class Being extends Entity{
 //    public Being(){
 //
 //    }
+    public void setHealth(int newHealth){
+        health = newHealth;
+    }
     public int getHealth(){
         return health;
+    }
+    public void setArmor(int newArmor){
+        armor = newArmor;
     }
     public int getArmor(){
         return armor;

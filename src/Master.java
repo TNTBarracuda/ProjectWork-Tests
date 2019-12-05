@@ -1,8 +1,8 @@
 import java.util.*;
 public class Master {
 
-    public static double getLEVEL_SCALING(){
-        return 1.15;
+    public static double getLEVEL_SCALING(int initialValue, int level){
+        return initialValue*Math.pow(1.15, level);
     }
     public static double Round(double value, int digits){
         double returnValueD = (Math.pow(10, digits)*value);
