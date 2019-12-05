@@ -2,6 +2,33 @@ import java.util.Scanner;
 
 public class MasterEX {
     static Player player = new Player();
+    static Enemy e1 = new Enemy(null, 0);static Enemy e2 = new Enemy(null, 0);
+    static Enemy e3 = new Enemy(null, 0);static Enemy e4 = new Enemy(null, 0);
+    public static void updateEnemy(int enemyID, String name, String description, int maxHealth, int agility, int size, int XP, int level, int aggressionThreshold, int perception) {
+        Enemy enemy = new Enemy(name, description, maxHealth, agility, size, XP, level, aggressionThreshold, perception);
+        if(enemyID == 1){
+            e1 = enemy;
+        }else if(enemyID == 2) {
+            e2 = enemy;
+        }else if (enemyID == 3){
+            e3 = enemy;
+        }else{
+            e4 = enemy;
+        }
+
+    }
+    public static void updateEnemy(int enemyID, String environment, int level){
+        Enemy enemy = new Enemy(environment, level);
+        if(enemyID == 1){
+            e1 = enemy;
+        }else if(enemyID == 2) {
+            e2 = enemy;
+        }else if (enemyID == 3){
+            e3 = enemy;
+        }else{
+            e4 = enemy;
+        }
+    }
 
     public static Player getPlayer(){
         return player;

@@ -1,27 +1,31 @@
-public class Being extends Entity{
-    private int maxHealth;
-    private int health;
-    private int agility;
-    private int size;
-    private Attack[] effects;
-    private String state;
-    private int level;
+public abstract class Being extends Entity{
+    String name; String description;
+    int maxHealth; private int health;
+    int maxArmor; private int armor;
+    int XP; int level;
+    int agility; int size;
+    int awareness;
+    Attack[] effects;
+    String state;
 
-    public Being(String name, String description, int maxHealth, int agility, int size, int XP, int level){
-        super(name, description);
-        this.maxHealth = maxHealth;
-        this.agility = agility;
-        this.size = size;
-        this.health = maxHealth;
-        this.effects = null;
-        this.state = null;
-        this.level = level;
-    }
+
+//    public Being(String name, String description, int maxHealth, int agility, int size, int XP, int level){
+//        this.maxHealth = maxHealth;
+//        this.agility = agility;
+//        this.size = size;
+//        this.health = maxHealth;
+//        this.effects = null;
+//        this.state = null;
+//        this.level = level;
+//    }
+//    public Being(){
+//
+//    }
     public int getHealth(){
         return health;
     }
-    public int getMaxHealth(){
-        return maxHealth;
+    public int getArmor(){
+        return armor;
     }
     public void setMaxHealth(int newMax){
         maxHealth = newMax;
@@ -40,6 +44,7 @@ public class Being extends Entity{
         }
     }
     public void evade(){ }
+    public void setName(String newName){}//TODO - finish method
     public void getHit(Attack hit){
         int items = effects.length;
         Attack[] temp = effects;
@@ -57,7 +62,7 @@ public class Being extends Entity{
 
         return new int[5];
     }
-    public int[] getLocalProcs(){
+    public Attack[] getLocalProcs(){
         for(int i=0; i<effects.length; i++){
             if(effects[i].getTurns() <= 0){
                 effects[i] = null;
@@ -74,6 +79,8 @@ public class Being extends Entity{
         for(int i=0; i<size; i++){
             effects[i]=effects[i];//TODO - complete & update
         }
+
+        return effects;//final return statement
     }
 
 }

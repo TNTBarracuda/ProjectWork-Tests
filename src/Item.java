@@ -5,7 +5,6 @@ public class Item extends Equipment{
     private boolean fixedHealing;
 
     public Item(String name, String description, int duration, int agility, int healAmount, boolean fixedHealing){
-        super(name, description);
         this.duration = duration;
         this.healAmount = healAmount;
         this.agility = agility;

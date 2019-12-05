@@ -1,0 +1,88 @@
+Names
+    Currency
+        Axia
+        Argentum
+
+    Life/Magic Energy
+        Energy
+        Mana
+        Gaea
+        Augum
+        Axiom
+    Magic
+        Augum
+        Axiom
+
+Enemies
+
+
+Environments
+    Cave
+
+    Hollow Crystal Forest (Forest)
+
+    Laboratory
+        Conglomerates
+            Fusion
+                Description = A grotesque figure containing an unknown amount of additional appendages, which seem to be forcibly grafted onto what was once a human body
+                Health = 135 (±10)
+                Armor = 30 (±5)
+                Size = 115
+                Agility = 70 (±10)
+                Awareness = 60 (±5)
+                Patience = 120
+            Amalgam
+                Description = A large mass of grafted skin, with 2 long and pointy limb extensions and no legs to support its body.
+                Health = 200 (±15)
+                Armor = 0
+                Size = 135
+                Agility = 30 (±5)
+                Awareness = 50 (±5)
+                Patience = 60
+            Pantheon
+                Description = A terrifying large figure formed of numerous extra heads that were stapled together with an industrial-grade staple gun, with 4 large arms outfitted with claws.
+                Health = 315 (±30)
+                Armor = 10(±5)
+                Size = 140
+                Agility = 75 (±5)
+                Awareness = 120 (±10)
+                Patience = 85
+        The Order
+            Hollow
+                Description = A mind-implanted [magic] user, aware of their own actions, yet unable to prevent themself from serving the Grand Order unhesitatingly.
+                Health = 110 (±10)
+                Armor = 60 (±15)
+                Size = 100
+                Agility = 90 (±10)
+            Guardian
+                Description = A mysterious and intimidating man covered in dark robes and wielding dark [magic], seemingly some kind of protector of the Grand Order.
+                Health = 100 (±5)
+                Armor = 20 (±5)
+                Size = 105
+                Agility = 110(±5)
+            Grand Councilman
+                Description =
+                Health = 130 (±15)
+                Armor = 80 (±20)
+                Size = 110
+                Agility = 90 (±10)
+
+        Arisen
+            Corpse
+                 Description = A corpse of a human, whose decaying state has seemingly been halted and preserved since mere days after death.
+                 Health = 70 (±10)
+                 Armor = 40 (±5)
+                 Size = 95
+                 Agility = 105 (±5)
+            Leaper
+                Description = An undead being that has been taken over by a parasitic host, and thus had its metabolism stripped away to leave it as a disturbingly thin life form.
+                Health = 50 (±5)
+                Armor = 20 (±5)
+                Size = 75
+                Agility = 150 (±15)
+            Revenant
+                Description = A resurrected being whose flesh has been stripped away to reveal durable muscles.
+                Health = 100 (±10)
+                Armor = 150 (±25)
+                Size = 100
+                Agility = 95 (±5)

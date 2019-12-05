@@ -227,10 +227,10 @@ public class Master {
     /** TODO - Allow bright colors to be used in TEXT coloration
      * Affects color of the text----------------------------------------------------------------------------------------
      */
-    public String Default(String string){//                         DEFAULT
+    public static String Default(String string){//                         DEFAULT
         return ("\u001B[0m" + string + "\u001B[0m");
     }
-        public String Default(String string, Character type){
+        public static String Default(String string, Character type){
             if(type == 'B') {
                 return ("\033[1;37m" + string + "\u001B[0m");
             }else if(type == 'U'){
@@ -239,10 +239,10 @@ public class Master {
                 return ("\u001B[0m" + string + "\u001B[0m");
             }
         }
-    public String Extra(String string){//                           EXTRA
+    public static String Extra(String string){//                           EXTRA
         return ("\u001B[30m" + string + "\u001B[0m");
     }
-        public String Extra(String string, Character type){
+        public static String Extra(String string, Character type){
             if(type == 'B') {
                 return ("\033[1;30m" + string + "\u001B[0m");
             }else if(type == 'U'){
@@ -251,10 +251,10 @@ public class Master {
                 return ("\u001B[30m" + string + "\u001B[0m");
             }
         }
-    public String Red(String string){//                             RED
+    public static String Red(String string){//                             RED
         return ("\u001B[31m" + string + "\u001B[0m");
     }
-        public String Red(String string, Character type){
+        public static String Red(String string, Character type){
             if(type == 'B') {
                 return ("\033[1;31m" + string + "\u001B[0m");
             }else if(type == 'U'){
@@ -263,10 +263,10 @@ public class Master {
                 return ("\u001B[31m" + string + "\u001B[0m");
             }
         }
-    public String Blue(String string){//                            BLUE
+    public static String Blue(String string){//                            BLUE
         return ("\u001B[34m" + string + "\u001B[0m");
     }
-        public String Blue(String string, Character type){
+        public static String Blue(String string, Character type){
             if(type == 'B') {
                 return ("\033[1;34m" + string + "\u001B[0m");
             }else if(type == 'U'){
@@ -275,10 +275,10 @@ public class Master {
                 return ("\u001B[34m" + string + "\u001B[0m");
             }
         }
-    public String Yellow(String string){//                          YELLOW
+    public static String Yellow(String string){//                          YELLOW
         return ("\u001B[33m" + string + "\u001B[0m");
     }
-        public String Yellow(String string, Character type){
+        public static String Yellow(String string, Character type){
             if(type == 'B') {
                 return ("\033[1;33m" + string + "\u001B[0m");
             }else if(type == 'U'){
@@ -287,10 +287,10 @@ public class Master {
                 return ("\u001B[33m" + string + "\u001B[0m");
             }
         }
-    public String Green(String string){//                           GREEN
+    public static String Green(String string){//                           GREEN
         return ("\u001B[32m" + string + "\u001B[0m");
     }
-        public String Green(String string, Character type){
+        public static String Green(String string, Character type){
             if(type == 'B') {
                 return ("\033[1;32m" + string + "\u001B[0m");
             }else if(type == 'U'){
@@ -299,10 +299,10 @@ public class Master {
                 return ("\u001B[32m" + string + "\u001B[0m");
             }
         }
-    public String Purple(String string){//                          PURPLE
+    public static String Purple(String string){//                          PURPLE
         return ("\u001B[35m" + string + "\u001B[0m");
     }
-        public String Purple(String string, Character type){
+        public static String Purple(String string, Character type){
             if(type == 'B') {
                 return ("\033[1;35m" + string + "\u001B[0m");
             }else if(type == 'U'){
@@ -311,10 +311,10 @@ public class Master {
                 return ("\u001B[35m" + string + "\u001B[0m");
             }
         }
-    public String Cyan(String string){//                            CYAN
+    public static String Cyan(String string){//                            CYAN
         return ("\u001B[36m" + string + "\u001B[0m");
     }
-        public String Cyan(String string, Character type){
+        public static String Cyan(String string, Character type){
             if(type == 'B') {
                 return ("\033[1;36m" + string + "\u001B[0m");
             }else if(type == 'U'){
@@ -326,49 +326,49 @@ public class Master {
     /**
      * Affects text background color------------------------------------------------------------------------------------
      */
-    public String Extra_Background(boolean bright, String string){
+    public static String Extra_Background(boolean bright, String string){
         if(bright){
             return ("\033[0;107m" + string + "\033[0m");
         }else{
             return ("\u001B[47m" + string + "\033[0m");
         }
     }
-    public String Red_Background(boolean bright, String string){
+    public static String Red_Background(boolean bright, String string){
         if(bright){
             return ("\033[0;101m" + string + "\033[0m");
         }else{
             return ("\u001B[41m" + string + "\033[0m");
         }
     }
-    public String Blue_Background(boolean bright, String string){
+    public static String Blue_Background(boolean bright, String string){
         if(bright){
             return ("\033[0;104m" + string + "\033[0m");
         }else{
             return ("\u001B[44m" + string + "\033[0m");
         }
     }
-    public String Yellow_Background(boolean bright, String string){
+    public static String Yellow_Background(boolean bright, String string){
         if(bright){
             return ("\033[0;103m" + string + "\033[0m");
         }else{
             return ("\u001B[43m" + string + "\033[0m");
         }
     }
-    public String Green_Background(boolean bright, String string){
+    public static String Green_Background(boolean bright, String string){
         if(bright){
             return ("\033[0;102m" + string + "\033[0m");
         }else{
             return ("\u001B[42m" + string + "\033[0m");
         }
     }
-    public String Purple_Background(boolean bright, String string){
+    public static String Purple_Background(boolean bright, String string){
         if(bright){
             return ("\033[0;105m" + string + "\033[0m");
         }else{
             return ("\u001B[45m" + string + "\033[0m");
         }
     }
-    public String Cyan_Background(boolean bright, String string){
+    public static String Cyan_Background(boolean bright, String string){
         if(bright){
             return ("\033[0;106m" + string + "\033[0m");
         }else{
@@ -378,7 +378,7 @@ public class Master {
     /**
      * Creates/spawns symbols according to type-------------------------------------------------------------------------
      */
-    public String GenerateSymbol(String symbol) {
+    public static String GenerateSymbol(String symbol) {
         if (symbol == "Flame") {
             return "🔥";     //△
         } else if (symbol == "Cold") {
