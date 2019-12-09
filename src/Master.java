@@ -1,6 +1,10 @@
 import java.util.*;
 public class Master {
 
+    public static boolean splitString(Enemy enemy){
+        return true;
+    }
+
     public static double getLEVEL_SCALING(int initialValue, int level){
         return initialValue*Math.pow(1.15, level);
     }

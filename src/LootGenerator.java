@@ -31,7 +31,7 @@
 //                if(return_rarity<=92){rarity=4;}if(return_rarity<=76){rarity=3;}
 //                if(return_rarity<=55){rarity=2;}if(return_rarity<=30){rarity=1;}
 //                    if(return_rarity>92) {rarity=5;}
-//                    //rarity = 5;//TODO -- USE ONLY FOR TESTING LEGENDARIES-----------------------------------------------
+//                    //rarity = 5;//
 //            int return_weapon_type;
 //
 //                double return_tracking; //tracking is the value for which enemy mobility is neglected (higher is better)
@@ -77,7 +77,7 @@
 //            }else{
 //                this.status_strength = 0;
 //            }
-//     }else {//IF LEGENDARY RARITY //TODO - update stats to include ammo count
+//     }else {//IF LEGENDARY RARITY //
 //                int legendaryWeapon = (int)master.Random(1, 4);
 //                this.level = $level;
 //                if(legendaryWeapon == 1){
@@ -185,7 +185,7 @@
 //              *        *     Auto Rifle = 66-90   (66-72      72-78      78-84      84-90  )
 //              *        *     Beam Rifle = 70-96   (70-76.5    76.5-83    83-89.5    89.5-96)
 //              */
-//             //TODO - Add other attributes (Crit Chance, Crit Damage Multiplier, Damage, Attack Count, Status Chance, Max Ammo)
+//             //
 //             int return_weapon_type;
 //        return_weapon_type = (int)master.Random(-3.0, 10.0);
 //                 //Type 0 = Melee

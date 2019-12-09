@@ -1,10 +1,10 @@
 public abstract class Weapon extends Equipment{
     private int rarity; int damage; String type;
-    private boolean inRecess = false; boolean global;
+    private boolean inRecess = false; boolean global; private int turns;
     private String statusEffect; private int statusStrength;
     int accuracy; int tracking; double critMultiplier; int critChance;
     int statusChance;
-    //TODO - IMPORT WEAPON GENERATION CODE
+    //
     public void determineStats() {
         int Rand = (int) Master.Random(1, 25, 0);
         if (Rand > 90) {
@@ -21,30 +21,37 @@ public abstract class Weapon extends Equipment{
             statusEffect = "null";
             statusStrength = 0;
             global = true;
+            turns = 0;
         }else if(Rand == 3){
             statusEffect = "Heat";
             statusStrength = (int)Master.Random(1, 5, 0);
             global = true;
+            turns = statusStrength;
         }else if(Rand == 4){
             statusEffect = "Cold";
             statusStrength = (int)Master.Random(1, 5, 0);
             global = false;
+            turns = (int)((statusStrength/2)+0.5);
         }else if(Rand == 5){
             statusEffect = "Corrosion";
             statusStrength = (int)Master.Random(1, 5, 0);
             global = false;
+            turns = 1;
         }else if(Rand == 6){
             statusEffect = "Bleeding";
             statusStrength = (int)Master.Random(1, 5, 0);
             global = true;
+            turns = (int)((statusStrength/2)+0.5);
         } else if(Rand == 7){
             statusEffect = "Void";
             statusStrength = (int)Master.Random(1, 3, 0);
             global = true;
+            turns = statusStrength;
         }else if(Rand == 8){
             statusEffect = "Solar";
             statusStrength = (int)Master.Random(1, 3, 0);
             global = false;
+            turns = (int)((statusStrength/2)+0.5);
         }
 
     }
@@ -57,6 +64,9 @@ public abstract class Weapon extends Equipment{
     public int getRarity(){
         return rarity;
     }
+    public int getTurns(){
+        return turns;
+    }
     public void EVADE(){
 
     }
@@ -64,8 +74,6 @@ public abstract class Weapon extends Equipment{
 
     }
     public abstract void BLITZ(Enemy target);
-
-
 
 
 }

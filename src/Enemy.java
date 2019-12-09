@@ -16,8 +16,43 @@ public class Enemy extends Being {
         this.level = level;
         int Rand = (int)Master.Random(1,100, 0);
         if(environment == "Cave"){
+            if(Rand > 66){
+                Rand = (int)Master.Random(1, 3, 0);
+                if(Rand == 1){
+                    name = "Renegade Bandit";
+                }else if(Rand == 2){
+                    name = "Bandit Scavenger";
+                }else{
+                    name = "Mercenary(Light)";
+                }
 
+            }
+            else if(Rand > 33){
+                Rand = (int)Master.Random(1, 3, 0);
+                if(Rand == 1){
+                    name = "Crystal Beastling";
+                }else if(Rand == 2){
+                    name = "Crystal Beast Guardian";
+                }else{
+                    name = "Adult Crystal Beast";
+                }
+            }
+
+            else /**Rand <= 33)*/{
+                Rand = (int)Master.Random(1, 3, 0);
+                if(Rand == 1){
+                    name = "High Council Warlock";
+
+                }else if(Rand == 2){
+                    name = "Rogue Mage";
+
+                }else{
+                    name = "Great Wizard";
+
+                }
+            }
         }
+
         if(environment == "Crystal Forest"){
             if(Rand > 80){}
             else if(Rand > 60){}

@@ -5,6 +5,8 @@ public class RUN {
         //System.out.println(hlayer.getMaxHealth());
         MasterEX.player.setName("OOhh");
         System.out.println(MasterEX.player.getName());
+        MasterEX.updateEnemy(1, "Cave", 1);
+        MasterEX.updateEnemy(2, "Cave", 1);
         Weapon gun = new Gun(2);
         System.out.println(gun.getName());
         System.out.println(gun.getDescription());

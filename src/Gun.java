@@ -5,12 +5,12 @@ public class Gun extends Weapon{
         rarity = super.getRarity();
         String[] gunType = {"Repeater", "Carbine", "Concussion Gun", "Blast Cannon", "Fusion Rifle"};
         type=gunType[(int)Master.Random(0,4,0)];
-        if(type == "Repeater"){//COMPLETE//TODO - FINISH STAT DELEGATION
+        if(type == "Repeater"){//COMPLETE
             super.damage = (int)Master.getLEVEL_SCALING((int)Master.delegateStats(32, 64, 0, rarity), level);
             super.accuracy = (int)Master.delegateStats(65, 95, 0, rarity);
             super.tracking = (int)Master.delegateStats(40,70, 0, rarity);
             super.critChance = (int)Master.delegateStats(15, 20, 0, rarity);
-            super.critMultiplier = Master.delegateStats(1.2, 1.7, 1, rarity);
+            super.critMultiplier = Master.delegateStats(1.4, 1.7, 1, rarity);
             super.statusChance = (int)Master.delegateStats(25, 45, 0, rarity);
         }else if(type == "Carbine"){//COMPLETE
             super.damage = (int)Master.getLEVEL_SCALING((int)Master.delegateStats(24, 48, 0, rarity), level);
@@ -45,8 +45,8 @@ public class Gun extends Weapon{
         }
 
     }
-    public void FOCUS(){
-
+    public void FOCUS(Enemy target){
+        target.getHit(new Attack(damage, getStatusEffect(), getStatusStrength(), global, getTurns(), accuracy, statusChance));
     }
     public void SHOOT(){
 

@@ -76,7 +76,7 @@ public class MasterEX {
                 target = divide[2];
                 availableOptions = false;
             } else {
-                //System.out.println(Master.Red("Execution failed. Syntax Error.", 'b'));
+                //System.out.println(Master.Red("EXECUTION FAILED: Syntax Error.", 'b'));
                 break;
             }
             System.out.println(weapon);
@@ -84,19 +84,44 @@ public class MasterEX {
             System.out.println(target);
 
             Equipment selected = null;
-            Being enemy = null;
+            Enemy enemy = null;
+            if(target == e1.name || target == "1"){
+                enemy = e1;
+            }else if(target == e2.name || target == "2"){
+                if(e2 != null){
+                    enemy = e2;
+                }else{
+                    System.out.println("EXECUTION FAILED: Invalid target.");
+                    continue;
+                }
+            }else if(target == e3.name || target == "3"){
+                if(e3 != null){
+                    enemy = e3;
+                }else{
+                    System.out.println("EXECUTION FAILED: Invalid target.");
+                    continue;
+                }
+            }else if(target == e4.name || target == "4"){
+                if(e4 != null){
+                    enemy = e4;
+                }else{
+                    System.out.println("EXECUTION FAILED: Invalid target.");
+                    continue;
+                }
+            }else{
+                System.out.println(Master.Red("EXECUTION FAILED: Invalid target.", 'b'));
+                continue;
+            }
             for (int i = 0; i < player.getInventory().length; i++) {
                 if (player.getInventory()[i].getName().equalsIgnoreCase(weapon.toUpperCase())) {
                     selected = player.getInventory()[i];
                 }
             }
             for (int i = 0; i < 4; i++) {//TODO - Implement enemy-storing battle script
-                if (player.getInventory()[i].getName().equalsIgnoreCase(weapon.toUpperCase())) {
+                if (player.getInventory()[i].getName().equalsIgnoreCase(weapon)) {
                     selected = player.getInventory()[i];
                 }
             }
-            Enemy targetEnemy;
-            //TODO - build a system that checks for enemies in the battle
 
             if (command.toUpperCase().equals("USE")) {
                 if (selected instanceof Item) {
@@ -115,7 +140,7 @@ public class MasterEX {
             }
             if (command.toUpperCase().equals("BLITZ")) {
                 if (selected instanceof Weapon) {//THIS SHOULD NOT REQUIRE NEW ENEMIES, SHOULD BE FED THE ENEMY VARIABLES FROM THE BATTLE
-                    ((Weapon) selected).BLITZ(MasterEX.e1);//TODO - FIX
+                    ((Weapon) selected).BLITZ(enemy);//
                 }
             }
             if (command.toUpperCase().equals("SHOOT")) {
@@ -125,7 +150,7 @@ public class MasterEX {
             }
             if (command.toUpperCase().equals("FOCUS")) {
                 if (selected instanceof Gun) {
-                    ((Gun) selected).FOCUS();
+                    ((Gun) selected).FOCUS(enemy);
                 }
             }
             if (command.toUpperCase().equals("SLICE")) {
@@ -137,6 +162,9 @@ public class MasterEX {
                 if (selected instanceof Maul) {
                     ((Maul) selected).SMASH();
                 }
+            }else{
+                System.out.println("EXECUTION FAILED: Invalid command.");
+                continue;
             }
         }
     }//END OF METHOD
