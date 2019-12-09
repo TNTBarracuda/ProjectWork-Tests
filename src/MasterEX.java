@@ -54,6 +54,9 @@ public class MasterEX {
         if(command.toUpperCase().equals("SNEAK")){
 
         }
+        if(command.toUpperCase().equals("")){
+
+        }
 
     }
     public static void battleCommand(){
